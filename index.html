@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMed - Medicine Dispenser</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SmartMed</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-section">
+            <h1>Welcome to SmartMed</h1>
+            <p>Revolutionizing medication management for elderly patients.</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </section>
+
+        <section id="features" class="features-section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="images/feature1.jpg" alt="Feature 1">
+                    <h3>Easy Voice Reminders</h3>
+                    <p>SmartMed gives voice reminders to ensure medication adherence.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/feature2.jpg" alt="Feature 2">
+                    <h3>Personalized Schedules</h3>
+                    <p>Create personalized medication schedules for each user.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/feature3.jpg" alt="Feature 3">
+                    <h3>Health Monitoring</h3>
+                    <p>Track and monitor health data for effective medication management.</p>
+                </div>
+            </div>
+
+            <!-- Medication Input Form -->
+            <h2>Add Medication Schedule</h2>
+            <form id="medication-form" class="medication-form">
+                <div class="form-group">
+                    <label for="medication-name">Medication Name:</label>
+                    <input type="text" id="medication-name" name="medicationName" placeholder="Enter medication name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="days">Days:</label>
+                    <input type="text" id="days" name="days" placeholder="E.g., Mon, Wed, Fri" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Add Schedule</button>
+            </form>
+
+
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form action="/contact" method="post" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="login" class="login-section">
+            <h2>Login</h2>
+            <form action="/login" method="post" class="login-form">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SmartMed. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
